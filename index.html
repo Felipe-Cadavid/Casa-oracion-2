@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5c36f53cca.js" crossorigin="anonymous"></script>
+    <title>Casa de Oracion y Puerta del Cielo</title>
+</head>
+<body>
+    <header class="header">
+        <img tabindex="0" aria-label="Casa de oración y puerta del cielo" class="header__logo" src="./assets/Logo.png" alt="Logo">
+        <h2 tabindex="0" class="header__text">"Formando <span class="red">Discípulos</span> para <span class="red">Cristo</span>"</h2>
+    </header>
+    <nav class="navbar">
+        <button aria-label="Botón de menú" class="navbar__button" type="button"><i class="fas fa-bars 3x"></i></button>
+        <ul class="navbar__list">
+        </ul>
+    </nav>
+
+    <main class="main">
+        <section class="main__verseofday">
+            <h3 class="verseofday__title">Versículo del día</h3>
+            <p class="verseofday__verse-title">Salmos 138:8</p>
+            <p class="verseofday__verse-text">Jehová cumplirá su propósito en mí; tu misericordia, oh Jehová, es para siempre; no desampares la obra de tus manos.</p>
+        </section>
+
+        <section class="welcome">
+            <h1 class="welcome__title">Bienvenido a Casa de Oración y Puerta del Cielo</h1>
+            <p class="welcome__description">Nuestro propósito es exaltar el nombre de Dios, Disfrutar de su presencia y compartir con otros el gozo de su salvación.</p>
+        </section>
+
+        <section class="services">
+            <h2 tabindex="0" class="services__title">Nuestros servicios</h2>
+            <div class="services__container">
+                <article class="services__service">
+                    <h3 tabindex="0" class="service__title">Culto Presencial</h3>
+                    <img tabindex="0" class="service__img" src="./assets/Logo.png" alt="Culto Presencial">
+                    <p tabindex="0" class="service__desc">Te invitamos a nuestro culto presencial, donde nos deleitaremos en la palabra del Señor todos los <span class="red">Domingos</span> a las 10:00 AM en el sexto piso del centro comercial La Central, encuentra cómo llegar <a href="#">aquí</a>.</p>
+                </article>
+                <hr>
+                <article class="services__service">
+                    <h3 tabindex="0" class="service__title">Noche de Clamor</h3>
+                    <img tabindex="0" class="service__img" src="./assets/Logo.png" alt="Noche de clamor">
+                    <p tabindex="0" class="service__desc">Todos los <span class="red">Miércoles</span> y <span class="red">Viernes</span> en la noche, te invitamos a que clamemos por tus <a class="service__link" href="#">peticiones</a> a través de meet</p>
+                </article>
+                <hr>
+                <article class="services__service">
+                    <h3 tabindex="0" class="service__title">Culto Matutino</h3>
+                    <img tabindex="0" class="service__img" src="./assets/Logo.png" alt="Culto Presencial">
+                    <p tabindex="0" class="service__desc">Te invitamos a nuestro culto matutino, donde todas las mañanas a las 5:00 AM de Lunes a Viernes, estaremos reflexionando y meditando en la palabra del Señor.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="social">
+            <h2 class="social__title">Nuestras redes</h2>
+            <p class="social__desc">Siguenos en nuestras redes sociales para estar al día con la información de nuestra iglesia</p>
+            <div class="social__items-container">
+                <a class="social__link" href="#">
+                    <i class="fab fa-facebook social__item"></i>
+                </a>
+                <a class="social__link" href="#">
+                    <i class="fab fa-instagram social__item"></i>
+                </a>
+                <a class="social__link" href="#">
+                    <i class="fab fa-youtube social__item"></i>
+                </a>
+            </div>
+        </section>
+    
+    </main>
+    <footer class="footer">
+        <div class="footer__title-container">
+            <h4 class="footer__title">Casa de Oración y Puerta del Cielo</h4>
+        </div>
+        <div class="footer__social">
+            <a class="footer__link" href="#">
+                <i class="fab fa-facebook footer__item"></i>
+            </a>
+            <a class="footer__link" href="#">
+                <i class="fab fa-instagram footer__item"></i>
+            </a>
+            <a class="footer__link" href="#">
+                <i class="fab fa-youtube footer__item"></i>
+            </a>
+        </div>
+    </footer>
+    <script>
+        const collapseButton = document.getElementsByClassName("navbar__button");
+        const list = document.getElementsByClassName("navbar__list");
+        let isCollapsed = true;
+        if(window.innerWidth > 800){
+            isCollapsed = false;
+            list[0].innerHTML = `
+                        <li tabindex="0" class="navbar--item">Inicio</li>
+                        <li tabindex="0" class="navbar--item">Quiénes somos</li>
+                        <li tabindex="0" class="navbar--item">Biblia</li>
+                        <li tabindex="0" class="navbar--item">Peticiones</li>
+                        <li tabindex="0" class="navbar--item">Apóyanos</li>
+                        <li tabindex="0" class="navbar--item">Cómo llegar</li>
+                        <li tabindex="0" class="navbar--item">Nuestra programación</li>
+                        <li tabindex="0" class="navbar--item">Contáctanos</li>
+                    `;
+        }
+        collapseButton[0].addEventListener("click", () => {
+            switch(isCollapsed){
+                case false:
+                    list[0].innerHTML = ``;
+                    isCollapsed = true;
+                    break;
+                case true:
+                    list[0].innerHTML = `
+                        <li tabindex="0" class="navbar--item">Inicio</li>
+                        <li tabindex="0" class="navbar--item">Quiénes somos</li>
+                        <li tabindex="0" class="navbar--item">Biblia</li>
+                        <li tabindex="0" class="navbar--item">Peticiones</li>
+                        <li tabindex="0" class="navbar--item">Apóyanos</li>
+                        <li tabindex="0" class="navbar--item">Cómo llegar</li>
+                        <li tabindex="0" class="navbar--item">Nuestra programación</li>
+                        <li tabindex="0" class="navbar--item">Contáctanos</li>
+                    `;
+                    isCollapsed = false;
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
