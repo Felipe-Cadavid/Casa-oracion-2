@@ -11,7 +11,10 @@
 <body>
     <header class="header">
         <img tabindex="0" aria-label="Casa de oración y puerta del cielo" class="header__logo" src="./assets/Logo.png" alt="Logo">
-        <h2 tabindex="0" class="header__text">"Formando <span class="red">Discípulos</span> para <span class="red">Cristo</span>"</h2>
+        <div class="header__title-container">
+            <h1 class="header__title">Casa de Oración y Puerta del Cielo</h1>
+            <h2 tabindex="0" class="header__text">"Formando <span class="red">Discípulos</span> para <span class="red">Cristo</span>"</h2>
+        </div>
     </header>
     <nav class="navbar">
         <button aria-label="Botón de menú" class="navbar__button" type="button"><i class="fas fa-bars 3x"></i></button>
@@ -54,6 +57,23 @@
             </div>
         </section>
 
+        <section class="pageitems-container">
+            <article class="peticiones-article">
+                <div class="peticiones-image"></div>
+                <div class="peticiones-button">Peticiones</div>
+            </article>
+            <article class="programacion-article">
+                <div class="programacion-image"></div>
+                <div class="programacion-button">Nuestra Programacion</div>
+            </article>
+            <article class="comollegar-article">
+                <div class="comollegar-image">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1667.5766722453923!2d-75.54846333654832!3d6.238923444932091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442866357dd023%3A0x4e989f2bd150983a!2sCentro%20Comercial%20La%20Central!5e0!3m2!1sen!2sco!4v1624058966845!5m2!1sen!2sco" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="comollegar-button">Cómo llegar</div>
+            </article>
+        </section>
+
         <section class="social">
             <h2 class="social__title">Nuestras redes</h2>
             <p class="social__desc">Siguenos en nuestras redes sociales para estar al día con la información de nuestra iglesia</p>
@@ -87,44 +107,6 @@
             </a>
         </div>
     </footer>
-    <script>
-        const collapseButton = document.getElementsByClassName("navbar__button");
-        const list = document.getElementsByClassName("navbar__list");
-        let isCollapsed = true;
-        if(window.innerWidth > 800){
-            isCollapsed = false;
-            list[0].innerHTML = `
-                        <li tabindex="0" class="navbar--item">Inicio</li>
-                        <li tabindex="0" class="navbar--item">Quiénes somos</li>
-                        <li tabindex="0" class="navbar--item">Biblia</li>
-                        <li tabindex="0" class="navbar--item">Peticiones</li>
-                        <li tabindex="0" class="navbar--item">Apóyanos</li>
-                        <li tabindex="0" class="navbar--item">Cómo llegar</li>
-                        <li tabindex="0" class="navbar--item">Nuestra programación</li>
-                        <li tabindex="0" class="navbar--item">Contáctanos</li>
-                    `;
-        }
-        collapseButton[0].addEventListener("click", () => {
-            switch(isCollapsed){
-                case false:
-                    list[0].innerHTML = ``;
-                    isCollapsed = true;
-                    break;
-                case true:
-                    list[0].innerHTML = `
-                        <li tabindex="0" class="navbar--item">Inicio</li>
-                        <li tabindex="0" class="navbar--item">Quiénes somos</li>
-                        <li tabindex="0" class="navbar--item">Biblia</li>
-                        <li tabindex="0" class="navbar--item">Peticiones</li>
-                        <li tabindex="0" class="navbar--item">Apóyanos</li>
-                        <li tabindex="0" class="navbar--item">Cómo llegar</li>
-                        <li tabindex="0" class="navbar--item">Nuestra programación</li>
-                        <li tabindex="0" class="navbar--item">Contáctanos</li>
-                    `;
-                    isCollapsed = false;
-                    break;
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
